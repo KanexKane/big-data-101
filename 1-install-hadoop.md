@@ -210,15 +210,6 @@ jps
 yarn node -list
 ```
 
-## Start Hadoop
-
-```
-start-dfs.sh
-start-yarn.sh
-jps
-yarn node -list
-```
-
 ## Stop Hadoop
 
 ```
