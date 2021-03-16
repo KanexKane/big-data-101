@@ -38,6 +38,8 @@ pip3 install numpy pandas matplotlib seaborn sklearn pyspark pymongo handyspark
 
 ## ติดตั้ง MySQL Connector ของ Python
 
+Activate (bigdata_env)
+
 ```
 python3.8 -m pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --trusted-host pypi.python.org mysql-connector-python
 ```
