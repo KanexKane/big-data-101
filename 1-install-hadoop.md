@@ -210,6 +210,8 @@ jps
 yarn node -list
 ```
 
+หลังจากสั่งสตาร์ท Hadoop แล้วสามารถเข้าผ่านเว็บบราวเซอร์ได้ที่ http://localhost:9870
+
 ## Stop Hadoop
 
 ```
