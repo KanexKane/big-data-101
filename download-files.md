@@ -21,13 +21,13 @@ wget http://mirrors.estointernet.in/apache/sqoop/1.4.7/sqoop-1.4.7.bin__hadoop-2
 ## commons-lang
 
 ```
-wget https://downloads.apache.org//commons/lang/binaries/commons-lang-2.6-bin.tar.gz
+wget https://downloads.apache.org/commons/lang/binaries/commons-lang-2.6-bin.tar.gz
 ```
 
 ## mysql-connector-java
 
 ```
-wget https://downloads.apache.org//commons/lang/binaries/commons-lang-2.6-bin.tar.gz
+wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar
 ```
 
 ## test_db
