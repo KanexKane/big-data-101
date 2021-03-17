@@ -25,7 +25,7 @@ sudo apt-get install ssh pdsh
 cd
 mkdir Downloads
 cd Downloads
-wget https://downloads.apache.org/hadoop/common/hadoop-3.3.0/hadoop- 3.3.0.tar.gz
+wget https://downloads.apache.org/hadoop/common/hadoop-3.3.0/hadoop-3.3.0.tar.gz
 tar -xzvf hadoop-3.3.0.tar.gz
 mv hadoop-3.3.0 /home/hadoopuser/hadoop
 ```
