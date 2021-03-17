@@ -225,7 +225,7 @@ cd downloads
 wget https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data--2020-06-21 22:52:28-- https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
 ls
 hdfs dfs -mkdir /hdfs_data
-hdfs dfs -put iris.data/hdfs_data
+hdfs dfs -put iris.data /hdfs_data
 hdfs dfs -ls /hdfs_data
 hdfs dfs -get /hdfs_data/iris.data downloaded_iris.csv
 ls
