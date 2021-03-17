@@ -76,7 +76,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 
 ```
 name: javax.jdo.option.connectionURL
-value: jdbc:mysql//localhost/metastore?createDatabaseIfNotExists=true
+value: jdbc:mysql://localhost/metastore?createDatabaseIfNotExists=true
 
 name: javax.jdo.option.connectionDriverName
 value: com.mysql.cj.jdbc.Driver
