@@ -1,10 +1,15 @@
 ## Create Hadoopuser
 
+(root@...): <== พิมพ์คำสั่งขณะใช้ root user
+
 ```
-sudo -I
-adduser hadoopuser
-usermod -aG sudo hadoopuser
+sudo -i
+(root@...): adduser hadoopuser
+(root@...): usermod -aG sudo hadoopuser
+(root@...): su hadoopuser
 ```
+
+หลังจากนี้จะอยู่ในสถานะ (hadoopuser@...)
 
 ## Install Java
 
@@ -16,15 +21,16 @@ java -version
 ## Install ssh and pdsh
 
 ```
-sudo apt-get install ssh pdsh
+sudo apt-get install ssh
+sudo apt-get install pdsh
 ```
 
 ## Download hadoop
 
 ```
 cd
-mkdir Downloads
-cd Downloads
+mkdir downloads
+cd downloads
 wget https://downloads.apache.org/hadoop/common/hadoop-3.3.0/hadoop-3.3.0.tar.gz
 tar -xzvf hadoop-3.3.0.tar.gz
 mv hadoop-3.3.0 /home/hadoopuser/hadoop
@@ -36,7 +42,7 @@ mv hadoop-3.3.0 /home/hadoopuser/hadoop
 cd /home/hadoopuser/hadoop/etc/hadoop
 ```
 
-เอาไฟล์จากโฟลเดอร์ hadoop/etc/hadoop ก๊อบปี้ใส่เข้าไปได้เลย หรือจะก๊อบโค้ดตรงนี้ใส่ทีละไฟล์ก็ได้
+เอาไฟล์จากโฟลเดอร์ hadoop/etc/hadoop ก๊อบปี้ใส่เข้าไปได้เลย หรือจะก๊อบโค้ดตรงนี้แก้ไขใส่ทีละไฟล์ก็ได้
 
 ### core-site.xml
 
@@ -98,7 +104,7 @@ sudo nano mapred-site.xml
 ### yarn-site.xml
 
 ```
-sudo nano mapred-site.xml
+sudo nano yarn-site.xml
 ```
 
 ```
@@ -190,6 +196,7 @@ sudo chmod g+rwx -R /home/hadoopuser/hadoop
 ## Format file system
 
 ```
+hadoop version
 cd $HADOOP_HOME
 mkdir data
 mkdir data/namenode
@@ -210,9 +217,23 @@ yarn node -list
 
 หลังจากสั่งสตาร์ท Hadoop แล้วสามารถเข้าผ่านเว็บบราวเซอร์ได้ที่ http://localhost:9870
 
+## ลองใช้คำสั่ง hdfs
+
+```
+cd
+cd downloads
+wget https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data --2020-06-21 22:52:28-- https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
+ls
+hdfs dfs -mkdir /hdfs_data
+hdfs dfs -put iris.data/hdfs_data
+hdfs dfs -ls /hdfs_data
+hdfs dfs -get /hdfs_data/iris.data downloaded_iris.csv
+ls
+```
+
 ## Stop Hadoop
 
 ```
-stop-dfs.sh
 stop-yarn.sh
+stop-dfs.sh
 ```
