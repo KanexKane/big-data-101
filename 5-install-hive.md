@@ -93,9 +93,9 @@ name: hive.txn.xlock.iow (ประมาณบรรทัดที่ 3219) �
 ### เพิ่มค่าเหล่านี้ในไฟล์ hive-site.xml
 
 ```
-<property><name>system:java.io.tmpdir</name><value>/tmp/hive/java</value>
+<property><name>system:java.io.tmpdir</name><value>/tmp/hive/java</value></property>
 
-<property><name>system:user.name</name><value>${user.name}</value>
+<property><name>system:user.name</name><value>${user.name}</value></property>
 ```
 
 ## สร้าง hiveuser ใน MySQL
