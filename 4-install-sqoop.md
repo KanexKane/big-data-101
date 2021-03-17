@@ -22,8 +22,8 @@ sudo mysql
 CREATE DATABASE hadoop_test;
 USE hadoop_test;
 CREATE TABLE user (name VARCHAR(20));
-CREATE USER ‘sqoopuser’@‘localhost’ IDENTIFIED BY ‘p@ssw0rd’;
-GRANT ALL PRIVILEGES ON hadoop_test.* TO ‘sqoopuser’@‘localhost’;
+CREATE USER "sqoopuser"@"localhost" IDENTIFIED BY "p@ssw0rd";
+GRANT ALL PRIVILEGES ON hadoop_test.* TO "sqoopuser"@"localhost";
 FLUSH PRIVILEGES;
 quit;
 ```
@@ -84,12 +84,13 @@ sudo chown -R hadoopuser:hadoopuser /home/hadoopuser/sqoop/lib/*
 อันนี้จะเป็นแค่ Table เดียว
 
 ```
-sqoop import --connect jdbc:mysql://localhost/hadoop_test —username ‘sqoopuser’ —password ‘p@ssw0rd’ —table user -m 1
+sqoop import --connect jdbc:mysql://localhost/hadoop_test --username "sqoopuser" --password "p@ssw0rd" --table user -m 1
+
 hdfs dfs -cat user/*
 ```
 
 อันนี้จะเป็นทุกๆ Table ของ Database เลย
 
 ```
-sqoop import-all-tables --connect jdbc:mysql://localhost/hadoop_test --username ‘sqoopuser’ —password p@ssw0rd --direct -m 1
+sqoop import-all-tables --connect jdbc:mysql://localhost/hadoop_test --username "sqoopuser" --password p@ssw0rd --direct -m 1
 ```
