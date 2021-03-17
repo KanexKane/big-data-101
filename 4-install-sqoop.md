@@ -33,7 +33,7 @@ quit;
 ```
 mysql -u sqoopuser -p
 USE hadoop_test;
-INSERT INTO user VALUES (‘sqoopuser’), (‘hiveuser’), (‘hadoopuser’), (‘piguser’), (‘mysqluser’), (‘mongodbuser’), (‘hbaseuser’), (‘root’);
+INSERT INTO user VALUES ("sqoopuser"), ("hiveuser"), ("hadoopuser"), ("piguser"), ("mysqluser"), ("mongodbuser"), ("hbaseuser"), ("root");
 SELECT * FROM user;
 quit;
 ```
