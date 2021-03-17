@@ -171,9 +171,9 @@ export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native:$LD_LIBRARY_PATH
 export PATH=$PATH:$SPARK_HOME/bin
 export PATH=$PATH:$SPARK_HOME/sbin
 export PATH=$PATH:$HADOOP_HOME/bin
-export PATH=$PATH:$HADOOP_HOME/
+export PATH=$PATH:$HADOOP_HOME/sbin
 
-sbin pdsh -q -w localhost
+pdsh -q -w localhost
 
 export PDSH_RCMD_TYPE=ssh
 ```
