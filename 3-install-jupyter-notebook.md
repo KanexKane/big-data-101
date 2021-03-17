@@ -6,19 +6,20 @@ sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.8
-python3.8 -m pip install --upgrade pip
 ```
 
 ## สร้าง Environment
 
 ```
 sudo apt install python3.8-venv
+sudo apt-get install python3-venv
 cd
 mkdir bigdata
 cd bigdata
 python3.8 -m venv bigdata_env
 cd bigdata_env/bin
 source activate
+python3.8 -m pip install --upgrade pip
 python
 ```
 
@@ -51,7 +52,7 @@ Activate (bigdata_env)
 ```
 sudo apt install python3-notebook jupyter jupyter-core
 python3.8 -m pip install ipykernel
-python3.8 -m ipykernel install --user -- name=bigdata_env
+python3.8 -m ipykernel install --user --name=bigdata_env
 ```
 
 ## Run Jupyter notebook
