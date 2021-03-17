@@ -62,16 +62,6 @@ export HIVE_CONF_DIR=/home/hadoopuser/hive/conf
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ```
 
-## สร้าง hiveuser ใน MySQL
-
-```
-sudo mysql
-CREATE USER ‘hiveuser’@‘localhost’ IDENTIFIED BY ‘hivepassword’;
-GRANT ALL PRIVILEGES ON *.* TO ‘hiveuser’@‘localhost’;
-FLUSH PRIVILEGES;
-quit;
-```
-
 ## แก้ไขไฟล์ hive-site.xml
 
 ```
@@ -106,6 +96,16 @@ name: hive.txn.xlock.iow (ประมาณบรรทัดที่ 3219) �
 <property><name>system:java.io.tmpdir</name><value>/tmp/hive/java</value>
 
 <property><name>system:user.name</name><value>${user.name}</value>
+```
+
+## สร้าง hiveuser ใน MySQL
+
+```
+sudo mysql
+CREATE USER ‘hiveuser’@‘localhost’ IDENTIFIED BY ‘hivepassword’;
+GRANT ALL PRIVILEGES ON *.* TO ‘hiveuser’@‘localhost’;
+FLUSH PRIVILEGES;
+quit;
 ```
 
 ## รัน hive และแก้ Error
