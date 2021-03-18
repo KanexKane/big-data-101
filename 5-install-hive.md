@@ -119,22 +119,12 @@ hive
 
 มันคือการ Error ไฟล์ guava ก็ให้ก๊อบปี้จาก hadoop ไปใช้ใน hive
 
+และอีกตัวนึงคือ มันจะ Error ตัว Connector มันใช้ไม่ได้ ให้ทำเหมือนกันคือเอาไฟล์ mysql-connector-java-8.0.23 ที่เคยดาวน์โหลดตอน Sqoop ก๊อบปี้ไปใส่ใน Hive ทำไปพร้อมกันเลยแล้วกัน
+
 ```
 rm -rf $HIVE_HOME/lib/guava-19.0.jar
 sudo cp $HADOOP_HOME/share/hadoop/common/lib/guava-27.0-jre.jar $HIVE_HOME/lib
-```
-
-เสร็จแล้วสั่งรันใหม่
-
-```
-hive
-```
-
-มันจะ Error ตัว Connector มันใช้ไม่ได้ ให้ทำเหมือนกันคือเอาไฟล์ mysql-connector-java-8.0.23 ที่เคยดาวน์โหลดตอน Sqoop ก๊อบปี้ไปใส่ใน Hive
-
-```
-cd /home/hadoopuser/downloads
-sudo cp mysql-connector-java-8.0.23.jar $HIVE_HOME/lib
+sudo cp /home/hadoopuser/downloads/mysql-connector-java-8.0.23.jar $HIVE_HOME/lib
 ```
 
 ## สร้างฐานข้อมูล metastore ใน MySQL ผ่าน Hive tool
