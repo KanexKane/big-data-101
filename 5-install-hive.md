@@ -142,7 +142,7 @@ sudo cp mysql-connector-java-8.0.23.jar $HIVE_HOME/lib
 ## สร้างฐานข้อมูล metastore ใน MySQL ผ่าน Hive tool
 
 ```
-- $HIVE_HOME/bin/schematool -initSchema -dbType mysql
+$HIVE_HOME/bin/schematool -initSchema -dbType mysql
 ```
 
 ## ทดสอบ Import จาก MySQL -> Hive ด้วย Sqoop
@@ -184,7 +184,7 @@ sudo cp hive-common-3.1.2.jar $SQOOP_HOME/lib
 ### รันคำสั่ง Import อีกครั้ง
 
 ```
-- sqoop import-all-tables —connect jdbc:mysql://localhost/employees —username "hiveuser" —password "hivepassword" —hive-import —hive-database employees —create-hive-table -m 1
+sqoop import-all-tables —connect jdbc:mysql://localhost/employees \-\-username "hiveuser" \-\-password "hivepassword" —hive-import —hive-database employees —create-hive-table -m 1
 ```
 
 ```
