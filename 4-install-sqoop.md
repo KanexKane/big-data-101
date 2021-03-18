@@ -9,7 +9,7 @@ su hadoopuser
 ## ติดตั้ง Sqoop
 
 ```
-cd /home/hadoopuser/Downloads
+cd /home/hadoopuser/downloads
 wget http://mirrors.estointernet.in/apache/sqoop/1.4.7/sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz
 tar -xzvf sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz
 sudo mv sqoop-1.4.7.bin__hadoop-2.6.0 /home/hadoopuser/sqoop
@@ -56,7 +56,7 @@ source ~/.bashrc
 ## ดาวน์โหลด Lib commons-lang ที่ Sqoop ต้องการ
 
 ```
-cd /home/hadoopuser/Downloads
+cd /home/hadoopuser/downloads
 wget https://downloads.apache.org/commons/lang/binaries/commons-lang-2.6-bin.tar.gz
 tar -xzvf commons-lang-2.6-bin.tar.gz
 cd commons-lang-2.6
@@ -68,7 +68,7 @@ sudo cp commons-lang-2.6.jar $SQOOP_HOME/lib
 ไฟล์ mysql-connector-java-8.0.23.jar อันนี้จะต้องใช้ทั้ง Sqoop และ Hive เก็บไว้ให้ดี
 
 ```
-cd /home/hadoopuser/Downloads
+cd /home/hadoopuser/downloads
 wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar
 sudo cp mysql-connector-java-8.0.23.jar $SQOOP_HOME/lib
 ```

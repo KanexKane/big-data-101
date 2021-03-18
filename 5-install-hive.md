@@ -6,19 +6,20 @@
 
 ```
 sudo apt install git
-cd /home/hadoopuser/Downloads
+cd /home/hadoopuser/downloads
 git clone https://github.com/datacharmer/test_db
+cd test_db
 sudo mysql
 CREATE DATABASE employees;
 USE employees;
-SOURCE /home/hadoopuser/Downloads/test_db/employees.sql;
+SOURCE /home/hadoopuser/downloads/test_db/employees.sql;
 quit;
 ```
 
 ## ดาวน์โหลด HIVE
 
 ```
-cd /home/hadoopuser/Downloads
+cd /home/hadoopuser/downloads
 wget http://apachemirror.wuchna.com/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
 tar -xzvf apache-hive-3.1.2-bin.tar.gz
 sudo mv apache-hive-3.1.2-bin /home/hadoopuser/hive
@@ -134,7 +135,7 @@ hive
 มันจะ Error ตัว Connector มันใช้ไม่ได้ ให้ทำเหมือนกันคือเอาไฟล์ mysql-connector-java-8.0.23 ที่เคยดาวน์โหลดตอน Sqoop ก๊อบปี้ไปใส่ใน Hive
 
 ```
-cd /home/hadoopuser/Downloads
+cd /home/hadoopuser/downloads
 sudo cp mysql-connector-java-8.0.23.jar $HIVE_HOME/lib
 ```
 
