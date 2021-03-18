@@ -37,13 +37,13 @@ export PATH=$PATH:$HIVE_HOME/bin
 ```
 
 ```
-- source ~/.bashrc
+source ~/.bashrc
 ```
 
 ## สร้างโฟลเดอร์ HIVE บน HDFS
 
 ```
-hdfs dfs -mkdir tmp
+hdfs dfs -mkdir /tmp
 hdfs dfs -mkdir -p /hive/warehouse
 hdfs dfs -chmod g+w /tmp
 hdfs dfs -chmod g+w /hive/warehouse
