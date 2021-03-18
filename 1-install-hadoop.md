@@ -231,6 +231,14 @@ hdfs dfs -get /hdfs_data/iris.data downloaded_iris.csv
 ls
 ```
 
+## ปรับ safe mode ให้เป็น off
+
+ในกรณีที่บางครั้ง Error เพราะเปิด Safe mode อยู่
+
+```
+hadoop dfsadmin -safemode leave
+```
+
 ## Stop Hadoop
 
 ```
