@@ -12,7 +12,7 @@ cd test_db
 sudo mysql
 CREATE DATABASE employees;
 USE employees;
-SOURCE /home/hadoopuser/downloads/test_db/employees.sql;
+SOURCE employees.sql;
 quit;
 ```
 
