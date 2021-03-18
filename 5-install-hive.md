@@ -76,9 +76,9 @@ quit;
 ## แก้ไขไฟล์ hive-site.xml
 
 ```
-- cd $HIVE_HOME/conf
-- sudo cp hive-default.xml.template hive-site.xml
-- sudo nano hive-site.xml
+cd $HIVE_HOME/conf
+sudo cp hive-default.xml.template hive-site.xml
+sudo nano hive-site.xml
 ```
 
 ### แก้ไขค่าเหล่านี้ในไฟล์ hive-site.xml
