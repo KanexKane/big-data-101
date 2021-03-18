@@ -87,7 +87,7 @@ sudo nano hive-site.xml
 
 ```
 name: javax.jdo.option.connectionURL
-value: jdbc:mysql://localhost/metastore?createDatabaseIfNotExists=true
+value: jdbc:mysql://localhost/metastore?createDatabaseIfNotExist=true
 
 name: javax.jdo.option.connectionDriverName
 value: com.mysql.cj.jdbc.Driver
