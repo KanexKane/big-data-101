@@ -145,10 +145,7 @@ quit;
 
 คำสั่ง import ทุกๆ table จาก database ที่ต้องการใน mysql
 
-```
-
 sqoop import-all-tables --connect jdbc:mysql://localhost/employees --username hiveuser --password hivepassword --hive-import --hive-database employees --create-hive-table -m 1
-```
 
 มันจะต้อง Error: hive.HiveConfig: Could not load org.apache.hadoop.hive.conf.HiveConf. Make sure HIVE_CONF_DIR is set correctly
 
@@ -172,9 +169,7 @@ sudo cp hive-common-3.1.2.jar $SQOOP_HOME/lib
 
 ### รันคำสั่ง Import อีกครั้ง
 
-```
 sqoop import-all-tables --connect jdbc:mysql://localhost/employees --username "hiveuser" --password "hivepassword" --hive-import --hive-database employees --create-hive-table -m 1
-```
 
 ```
 hive
