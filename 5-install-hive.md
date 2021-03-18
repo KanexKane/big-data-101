@@ -120,10 +120,8 @@ hive
 มันคือการ Error ไฟล์ guava ก็ให้ก๊อบปี้จาก hadoop ไปใช้ใน hive
 
 ```
-cd $HIVE_HOME/lib
-rm -rf guava-19.0.jar
-cd $HADOOP_HOME/share/hadoop/common/lib
-sudo cp guava-27.0-jre.jar $HIVE_HOME/lib
+rm -rf $HIVE_HOME/lib/guava-19.0.jar
+sudo cp $HADOOP_HOME/share/hadoop/common/lib/guava-27.0-jre.jar $HIVE_HOME/lib
 ```
 
 เสร็จแล้วสั่งรันใหม่
