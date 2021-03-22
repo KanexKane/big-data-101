@@ -120,6 +120,13 @@ sujanya-secondary1
 sujanya-secondary2
 ```
 
+## ก๊อบปี้ Hadoop config จากเครื่องหลักไปเครื่องสำรอง
+
+```
+scp $HADOOP_HOME/etc/hadoop/* sujanya-secondary1:$HADOOP_HOME/etc/hadoop/
+scp $HADOOP_HOME/etc/hadoop/* sujanya-secondary2:$HADOOP_HOME/etc/hadoop/
+```
+
 ## ทดลองรัน start-dfs.sh
 
 หลังจากสั่งรัน ลองเข้าไปที่ 192.168.56.101:9870 ไปดูที่ Live Node หากถูกต้องมันต้องมีค่าเป็น 2 หรือในส่วนของ Datanode ต้องมีรายการเครื่องย่อยแสดงขึ้นมา
