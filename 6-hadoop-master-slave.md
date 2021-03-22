@@ -109,7 +109,7 @@ sudo nano $HADOOP_HOME/etc/hadoop/hdfs-site.xml
 </property>
 ```
 
-## แก้ไข workers เฉพาะเครื่องหลัก
+## แก้ไข workers ทุกเครื่อง
 
 ```
 sudo nano $HADOOP_HOME/etc/hadoop/workers
