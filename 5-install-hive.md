@@ -2,13 +2,24 @@
 
 ## ดาวน์โหลดฐานข้อมูลจำลอง
 
-แล้วทำการ Import เข้า mysql
+แล้วทำการ Import เข้า mysql โดยที่การ import จะมี 2 แบบ เคนเลยเอาใส่ไว้ให้ทั้ง 2 แบบเลยละกัน
 
 ```
 sudo apt install git
 cd /home/hadoopuser/downloads
 git clone https://github.com/datacharmer/test_db
 cd test_db
+```
+
+### การ import mysql แบบที่ 1
+
+```
+sudo mysql -t < employees.sql
+```
+
+### การ import mysql แบบที่ 2
+
+```
 sudo mysql
 CREATE DATABASE employees;
 USE employees;
@@ -163,10 +174,25 @@ sudo cp hive-common-3.1.2.jar $SQOOP_HOME/lib
 
 ### คำสั่ง import ทุกๆ table จาก database ที่ต้องการใน mysql
 
+#### แบบนี้คือแบบที่เคนไปหามาได้
+
 sqoop import-all-tables --connect jdbc:mysql://localhost/employees --username hiveuser --password hivepassword --hive-import --hive-database employees --create-hive-table --direct -m 1
+
+#### อันนี้คือแบบที่อาจารย์ให้มา
+
+sqoop import-all-tables --connect jdbc:mysql://localhost/employees --username hiveuser -P --direct -m 1
+
+## เช็คว่า Import ไปที่ Hive เข้าไหม
 
 ```
 hive
 USE employees;
 SELECT * FROM departments;
+```
+
+## เช็คว่า Import ไปที่ Hive เข้า Hdfs ไหม
+
+```
+hdfs dfs -ls /user/hadoopuser/
+hdfs dfs -cat /user/hadoopuser/departments/part-m-00000
 ```
