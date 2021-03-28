@@ -277,13 +277,13 @@ sudo mysql
 
 ```
 
-CREATE DATABASE hadoop*test;
+CREATE DATABASE hadoop_test;
 USE hadoop_test;
 CREATE TABLE user (name VARCHAR(20));
 CREATE USER "sqoopuser"@"localhost" IDENTIFIED BY "p@ssw0rd";
 GRANT ALL PRIVILEGES ON hadoop_test.* TO "sqoopuser"@"localhost";
 CREATE USER "hiveuser"@"localhost" IDENTIFIED BY "hivepassword";
-GRANT ALL PRIVILEGES ON \_.\* TO "hiveuser"@"localhost";
+GRANT ALL PRIVILEGES ON *.* TO "hiveuser"@"localhost";
 FLUSH PRIVILEGES;
 quit;
 ;
