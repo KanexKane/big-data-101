@@ -9,8 +9,11 @@ adduser hadoopuser
 ```
 
 ```
-usermod -aG sudo hadoopuser;
-su hadoopuser;
+usermod -aG sudo hadoopuser
+```
+
+```
+su hadoopuser
 ```
 
 ## Install packages
