@@ -19,7 +19,7 @@ su hadoopuser
 ## Install packages
 
 ```
-wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -;
+wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
 ```
 
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list;
@@ -272,13 +272,13 @@ sudo mysql
 
 ```
 
-CREATE DATABASE hadoop_test;
+CREATE DATABASE hadoop*test;
 USE hadoop_test;
 CREATE TABLE user (name VARCHAR(20));
 CREATE USER "sqoopuser"@"localhost" IDENTIFIED BY "p@ssw0rd";
-GRANT ALL PRIVILEGES ON hadoop_test._ TO "sqoopuser"@"localhost";
+GRANT ALL PRIVILEGES ON hadoop_test.* TO "sqoopuser"@"localhost";
 CREATE USER "hiveuser"@"localhost" IDENTIFIED BY "hivepassword";
-GRANT ALL PRIVILEGES ON _.\* TO "hiveuser"@"localhost";
+GRANT ALL PRIVILEGES ON \_.\* TO "hiveuser"@"localhost";
 FLUSH PRIVILEGES;
 quit;
 ;
