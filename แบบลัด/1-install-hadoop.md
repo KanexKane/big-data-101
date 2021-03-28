@@ -84,9 +84,9 @@ cp mysql-connector-java-8.0.23.jar /home/hadoopuser/sqoop/lib;
 
 ```
 
-cp /home/hadoopuser/downloads/big-data-101/hadoop/etc/hadoop/_ /home/hadoopuser/hadoop/etc/hadoop/;
-cp /home/hadoopuser/downloads/big-data-101/hive/conf/_ /home/hadoopuser/hive/conf/;
-cp /home/hadoopuser/downloads/big-data-101/sqoop/conf/\* /home/hadoopuser/sqoop/conf/;
+cp /home/hadoopuser/downloads/big-data-101/hadoop/etc/hadoop/* /home/hadoopuser/hadoop/etc/hadoop/;
+cp /home/hadoopuser/downloads/big-data-101/hive/conf/* /home/hadoopuser/hive/conf/;
+cp /home/hadoopuser/downloads/big-data-101/sqoop/conf/* /home/hadoopuser/sqoop/conf/;
 rm -rf /home/hadoopuser/hive/lib/guava-19.0.jar;
 cp /home/hadoopuser/hadoop/share/hadoop/common/lib/guava-27.0-jre.jar /home/hadoopuser/hive/lib;
 cp /home/hadoopuser/downloads/mysql-connector-java-8.0.23.jar /home/hadoopuser/hive/lib;
