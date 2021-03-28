@@ -195,12 +195,15 @@ hdfs namenode -format
 ## Start Hadoop
 
 ```
-
 start-dfs.sh
+```
+```
 start-yarn.sh
+```
 
 # check jobs and node list
 
+```
 jps
 yarn node -list
 
@@ -211,10 +214,10 @@ yarn node -list
 ## Stop Hadoop
 
 ```
-
 stop-yarn.sh
+```
+```
 stop-dfs.sh
-
 ```
 
 ## สร้าง Environment
