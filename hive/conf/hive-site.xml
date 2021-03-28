@@ -592,7 +592,7 @@
   </property>
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:mysql://localhost/metastore?createDatabaseIfNotExists=true</value>
+    <value>jdbc:mysql://localhost/metastore?createDatabaseIfNotExist=true</value>
     <!--<value>jdbc:derby:;databaseName=metastore_db;create=true</value>-->
     <description>
       JDBC connect string for a JDBC metastore.
