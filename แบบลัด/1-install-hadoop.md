@@ -109,7 +109,7 @@ sudo chmod g+rwx -R /home/hadoopuser/hadoop
 
 ```
 
-sudo chown -R hadoopuser:hadoopuser /home/hadoopuser/sqoop/lib/\*
+sudo chown -R hadoopuser:hadoopuser /home/hadoopuser/sqoop/lib/*
 
 ```
 
