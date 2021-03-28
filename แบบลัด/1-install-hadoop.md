@@ -63,7 +63,7 @@ wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.23/mysql-conn
 
 tar -xzvf hadoop-3.3.0.tar.gz;
 tar -xzvf apache-hive-3.1.2-bin.tar.gz;
-tar -xzvf sqoop-1.4.7.bin\_\_hadoop-2.6.0.tar.gz;
+tar -xzvf sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz;
 tar -xzvf commons-lang-2.6-bin.tar.gz;
 ;
 
@@ -72,18 +72,10 @@ tar -xzvf commons-lang-2.6-bin.tar.gz;
 ```
 
 mv hadoop-3.3.0 /home/hadoopuser/hadoop;
-mv sqoop-1.4.7.bin\_\_hadoop-2.6.0 /home/hadoopuser/sqoop;
+mv sqoop-1.4.7.bin__hadoop-2.6.0 /home/hadoopuser/sqoop;
 mv apache-hive-3.1.2-bin /home/hadoopuser/hive;
 cp commons-lang-2.6/commons-lang-2.6.jar /home/hadoopuser/sqoop/lib;
 cp mysql-connector-java-8.0.23.jar /home/hadoopuser/sqoop/lib;
-;
-
-```
-
-## Setting Hadoop
-
-```
-
 cp /home/hadoopuser/downloads/big-data-101/hadoop/etc/hadoop/* /home/hadoopuser/hadoop/etc/hadoop/;
 cp /home/hadoopuser/downloads/big-data-101/hive/conf/* /home/hadoopuser/hive/conf/;
 cp /home/hadoopuser/downloads/big-data-101/sqoop/conf/* /home/hadoopuser/sqoop/conf/;
@@ -92,34 +84,25 @@ cp /home/hadoopuser/hadoop/share/hadoop/common/lib/guava-27.0-jre.jar /home/hado
 cp /home/hadoopuser/downloads/mysql-connector-java-8.0.23.jar /home/hadoopuser/hive/lib;
 cp /home/hadoopuser/hive/lib/hive-common-3.1.2.jar /home/hadoopuser/sqoop/lib;
 ;
-
 ```
 
 ```
-
 sudo chown hadoopuser:root -R /home/hadoopuser/hadoop
-
 ```
 
 ```
-
 sudo chmod g+rwx -R /home/hadoopuser/hadoop
-
 ```
 
 ```
-
 sudo chown -R hadoopuser:hadoopuser /home/hadoopuser/sqoop/lib/*
-
 ```
 
 ```
-
 mkdir /home/hadoopuser/hadoop/data;
 mkdir /home/hadoopuser/hadoop/data/namenode;
 mkdir /home/hadoopuser/hadoop/data/datanode;
 ;
-
 ```
 
 ## Configure SSH
