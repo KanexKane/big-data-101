@@ -258,8 +258,10 @@ pip3 install numpy pandas matplotlib seaborn sklearn pyspark pymongo handyspark;
 python3 -m pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --trusted-host pypi.python.org mysql-connector-python;
 sudo apt install -y python3-notebook jupyter jupyter-core;
 python3 -m pip install ipykernel;
-python3 -m ipykernel install --user --name=bigdata_env;
 ;
+```
+
+python3 -m ipykernel install --user --name=bigdata_env
 
 ```
 
@@ -333,6 +335,8 @@ sqoop import-all-tables --connect jdbc:mysql://localhost/employees --username hi
 hdfs dfs -ls /user/hadoopuser/;
 hdfs dfs -cat /user/hadoopuser/departments/part-m-00000;
 ;
+
+```
 
 ```
 
