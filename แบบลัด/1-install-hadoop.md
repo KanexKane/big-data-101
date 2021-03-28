@@ -261,8 +261,10 @@ python3 -m pip install ipykernel;
 ;
 ```
 
-python3 -m ipykernel install --user --name=bigdata_env
-
+```
+python3 -m ipykernel install --user --name=bigdata_env;
+jupyter notebook;
+;
 ```
 
 ## สร้าง sqoopuser & hiveuser ใน MySQL
@@ -335,6 +337,8 @@ sqoop import-all-tables --connect jdbc:mysql://localhost/employees --username hi
 hdfs dfs -ls /user/hadoopuser/;
 hdfs dfs -cat /user/hadoopuser/departments/part-m-00000;
 ;
+
+```
 
 ```
 
