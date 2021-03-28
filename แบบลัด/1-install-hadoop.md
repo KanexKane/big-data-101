@@ -333,17 +333,7 @@ sqoop import-all-tables --connect jdbc:mysql://localhost/employees --username hi
 ## เช็คว่า Import ไปที่ Hive เข้า Hdfs ไหม
 
 ```
-
 hdfs dfs -ls /user/hadoopuser/;
 hdfs dfs -cat /user/hadoopuser/departments/part-m-00000;
 ;
-
-```
-
-```
-
-```
-
-```
-
 ```
