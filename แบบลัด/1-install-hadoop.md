@@ -19,7 +19,7 @@ su hadoopuser;
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -;
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list;
 sudo apt-get update;
-;
+
 ```
 
 ```
@@ -32,7 +32,7 @@ sudo apt-get install -y git openjdk-8-jdk ssh pdsh mysql-server gnupg mongodb-or
 cd;
 mkdir downloads;
 cd downloads;
-;
+
 ```
 
 ```
@@ -43,7 +43,7 @@ wget http://mirrors.estointernet.in/apache/sqoop/1.4.7/sqoop-1.4.7.bin__hadoop-2
 wget http://apachemirror.wuchna.com/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz;
 wget https://downloads.apache.org/commons/lang/binaries/commons-lang-2.6-bin.tar.gz;
 wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar;
-;
+
 ```
 
 ```
@@ -195,7 +195,7 @@ cd bigdata;
 python3 -m venv bigdata_env;
 source bigdata_env/bin/activate;
 python3 -m pip install --upgrade pip;
-;
+
 ```
 
 ## ติดตั้งแพ็คเกจ Python ที่ใช้กับ Big Data
