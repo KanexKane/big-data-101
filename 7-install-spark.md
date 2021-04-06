@@ -17,11 +17,12 @@ sudo nano ~/.bashrc
 ```
 export SPARK_HOME=/home/hadoopuser/spark/
 export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
-export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 export PYSPARK_DRIVER_PYTHON="jupyter"
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 export PYSPARK_PYTHON=python3
 export PATH=$SPARK_HOME:$PATH:~/.local/bin:$JAVA_HOME/bin
+export PATH=$PATH:$SPARK_HOME/bin
+export PATH=$PATH:$SPARK_HOME/sbin
 ```
 ```
 source ~/.bashrc
