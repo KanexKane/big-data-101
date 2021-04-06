@@ -55,6 +55,7 @@ wget http://mirrors.estointernet.in/apache/sqoop/1.4.7/sqoop-1.4.7.bin__hadoop-2
 wget http://apachemirror.wuchna.com/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz;
 wget https://downloads.apache.org/commons/lang/binaries/commons-lang-2.6-bin.tar.gz;
 wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar;
+wget https://downloads.apache.org/spark/spark-3.1.1/spark-3.1.1-bin-hadoop2.7.tgz;
 ;
 
 ```
@@ -65,6 +66,7 @@ tar -xzvf hadoop-3.3.0.tar.gz;
 tar -xzvf apache-hive-3.1.2-bin.tar.gz;
 tar -xzvf sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz;
 tar -xzvf commons-lang-2.6-bin.tar.gz;
+tar -xzvf spark-3.1.1-bin-hadoop2.7.tgz;
 ;
 
 ```
@@ -74,6 +76,7 @@ tar -xzvf commons-lang-2.6-bin.tar.gz;
 mv hadoop-3.3.0 /home/hadoopuser/hadoop;
 mv sqoop-1.4.7.bin__hadoop-2.6.0 /home/hadoopuser/sqoop;
 mv apache-hive-3.1.2-bin /home/hadoopuser/hive;
+mv spark-3.1.1-bin-hadoop2.7 /home/hadoopuser/spark;
 cp commons-lang-2.6/commons-lang-2.6.jar /home/hadoopuser/sqoop/lib;
 cp mysql-connector-java-8.0.23.jar /home/hadoopuser/sqoop/lib;
 cp /home/hadoopuser/downloads/big-data-101/hadoop/etc/hadoop/* /home/hadoopuser/hadoop/etc/hadoop/;
@@ -161,10 +164,16 @@ export HADOOP_YARN_HOME=$HADOOP_HOME
 export YARN_HOME=$HADOOP_HOME
 export JAVA_LIBRARY_PATH=$HADOOP_HOME/lib/native:$JAVA_LIBRARY_PATH
 export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native:$LD_LIBRARY_PATH
-export PATH=$PATH:$SPARK_HOME/bin
-export PATH=$PATH:$SPARK_HOME/sbin
+export SPARK_HOME=/home/hadoopuser/spark
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON=python3
+export PATH=$SPARK_HOME:$PATH:~/.local/bin:$JAVA_HOME/bin
 export PATH=$PATH:$HADOOP_HOME/bin
 export PATH=$PATH:$HADOOP_HOME/sbin
+export PATH=$PATH:$SPARK_HOME/bin
+export PATH=$PATH:$SPARK_HOME/sbin
 
 pdsh -q -w localhost
 
