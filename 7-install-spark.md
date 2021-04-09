@@ -47,13 +47,16 @@ import pyspark
 
 pyspark.__version__
 
-spark = pyspark.sql.SparkSession.builder.getOrCreate()
-sc = pyspark.SparkContext()
+# spark = sql.SparkSession.builder.getOrCreate()
+spark = pyspark.sql.SparkSession.builder.appName("YongyeeMaster").getOrCreate()
+
+# sc_config = pyspark.SparkConf().setMaster('local').setAppName('YongyeeMaster')
+# sc = pyspark.SparkContext(conf=sc_config).getOrCreate()
+sc = spark.sparkContext
 
 spark
 sc
 
-spark = pyspark.sql.SparkSession.builder.appName("YongyeeMaster").getOrCreate()
-
 spark.stop()
+sc.stop()
 ```
