@@ -2,7 +2,7 @@ import mysql.connector
 import pymongo
 import datetime
 
-dbName = "projectA"
+dbName = "hadoop_test"
 
 mgoclient = pymongo.MongoClient("mongodb://localhost:27017")
 mgodb = mgoclient[dbName]
@@ -10,7 +10,7 @@ mgodb = mgoclient[dbName]
 db = mysql.connector.connect(
     host="127.0.0.1",
     user="root",
-    passwd="",
+    passwd="root",
     database=dbName
 )
 
@@ -20,7 +20,7 @@ def migrate(db, mgodb, table, page):
     mgocol = mgodb[table]
     mgocol.create_index("ID", unique=True)
 
-    white True:
+    while True:
         offset = (page - 1) * limit
         page = page + 1
 
@@ -37,10 +37,10 @@ def migrate(db, mgodb, table, page):
                 if(isinstance(row[key], datetime.datetime) or isinstance(row[key], datetime.date)):
                     row[key] = row[key].strftime('%Y-%m-%d %H:%M:%S')
 
-                    try:
-                        mgocol.insert_one(row)
-                    except:
-                        print("Error Insert")
+            try:
+                mgocol.insert_one(row)
+            except:
+                print("Error Insert")
 
 
 mycursor = db.cursor()
