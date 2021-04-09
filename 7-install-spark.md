@@ -39,3 +39,21 @@ source /bigdata/bigdata_env/bin/activate
 ```
 pyspark
 ```
+
+## คำสั่ง Pyspark เบื้องต้น
+
+```
+import pyspark
+
+pyspark.__version__
+
+spark = pyspark.sql.SparkSession.builder.getOrCreate()
+sc = pyspark.SparkContext()
+
+spark
+sc
+
+spark = pyspark.sql.SparkSession.builder.appName("YongyeeMaster").getOrCreate()
+
+spark.stop()
+```
