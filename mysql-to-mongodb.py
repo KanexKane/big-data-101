@@ -18,7 +18,8 @@ def migrate(db, mgodb, table, page):
     cursor = db.cursor(dictionary=True)
     limit = 100
     mgocol = mgodb[table]
-    mgocol.create_index("ID", unique=True)
+    # UNNESSESARY
+    # mgocol.create_index("ID", unique=True)
 
     while True:
         offset = (page - 1) * limit
