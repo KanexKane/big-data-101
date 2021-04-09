@@ -2,7 +2,8 @@
 
 ## ดาวน์โหลด
 ```
-cd /downloads;
+cd;
+cd downloads;
 wget https://downloads.apache.org/spark/spark-3.1.1/spark-3.1.1-bin-hadoop2.7.tgz;
 tar -xzvf spark-3.1.1-bin-hadoop2.7.tgz;
 mv spark-3.1.1-bin-hadoop2.7 /home/hadoopuser/spark;
